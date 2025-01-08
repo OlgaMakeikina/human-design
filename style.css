@@ -1,0 +1,360 @@
+html, body {
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: 700px;
+    margin: 0;
+    padding: 0;
+  }
+
+body {
+
+    background-color: #fffff8;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b6070;
+    color: #fffff8;
+  }
+  
+  .logo {
+    font-weight: bold;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo img {
+    margin: 0;
+  }
+  
+  .logo p {
+    margin: -1px 0 0 0;
+    line-height: 1;
+    font-size: 1.2rem;
+    color: #fffff8;
+  }
+  
+  .menu {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    padding: 5px 10px;
+  }
+  
+  .menu li {
+    margin: 0;
+  }
+  
+  .menu-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-family: "Raleway", serif;
+  }
+  
+  .menu-link:hover {
+    color: #b5dcd5;
+  }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 0.4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .burger .line {
+    width: 25px;
+    height: 3px;
+    background: white;
+  }
+
+.header {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  color: #6e6157;
+  margin-top: 150px;
+}
+/* home */
+#home {
+  flex: 0 0 auto; /* Задаем фиксированную высоту для блока */
+  height: 100vh;
+  width: 100%;
+  background-image: url(1.jpg);
+  background-repeat: no-repeat;
+  background-position: start;
+  background-attachment: fixed;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+.main-name {
+  color:#5BDCD5;
+  letter-spacing: 2px; 
+  font-family: "Raleway", serif;
+  font-size: 24px;
+}
+.main-cont {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 45%;
+  justify-content: center;
+  margin-left: 5%;
+}
+.text-hd {
+  font-family: "Raleway", serif;
+  color: #fffff8;
+  font-size: 18px;
+}
+.main-cont h1 {
+  font-size: 48px;
+  font-weight: bold;
+  font-family: "Rubik Mono One", serif;
+  filter: drop-shadow(0 0 15px #5BDCD5);  
+  background: linear-gradient(45deg, #5BDCD5, #F3B260);
+  animation: gradient 5s ease infinite;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.7px #2b6a66; 
+margin-top: 0;
+}
+
+.messageMe {
+  font-family: "Raleway", serif;
+  background: linear-gradient(45deg, #5BDCD5,#4C9A8A, #5BDCD5, #F3B260);
+  background-size: 300% 300%; /* Увеличиваем размер градиента */
+  border: #6e6157 1px solid;
+  color: #fffff8;
+  font-weight: bold;
+  padding: 10px;
+  width: 60%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+  animation: gradient 5s ease infinite;
+  margin-top: 50px;
+}
+
+ 
+
+  /* тарифы */
+  .tarif-cont {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+.tarif {
+  border: 1px solid #6e6157;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  background-color: #ffffff;
+  width: 200px;
+}  
+.tarif:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+}
+.tarif-name {
+  font-family: "Raleway", serif;
+  color: #6e6157;
+  font-weight: bold;
+  margin: 10px;
+  text-align: center;
+}
+.more-info {
+  font-family: "Raleway", serif;
+  background: linear-gradient(45deg, #5BDCD5,#4C9A8A, #5BDCD5, #F3B260);
+  background-size: 300% 300%; /* Увеличиваем размер градиента */
+  border: #6e6157 1px solid;
+  color: #fffff8;
+  font-weight: bold;
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+  .more-info:hover {
+    animation: gradient 5s ease infinite;
+  }
+
+
+@keyframes gradient {
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+
+/* О дизайне */
+.hd-about {
+  display: flex; 
+  align-items: center;
+  color: #6e6157;
+  font-family: "Raleway", serif;
+  font-size: 18px;
+  gap: 50px;
+  margin: 70px 10%;
+}
+.hd-about img {
+  width: 40%;
+  height: 40%;
+}
+.header-point {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+}
+
+/* Обо мне */
+.about-cont {
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 10%;
+ 
+}
+.about-text {
+  font-family: "Raleway", serif;
+  color: #6e6157;
+  font-size: 18px;
+}
+.advantages-header {
+  font-family: "Cormorant Garamond", serif;
+  color: #6e6157;
+  font-weight: 600;
+  font-size: 36px;
+  text-align: center;
+}
+.adv-main-cont {
+
+}
+.advantages {
+  font-family: "Raleway", serif;
+  color: #6e6157;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+  font-size: 18px;
+  gap: 2rem; 
+  padding: 0;
+  margin: 0;
+
+}
+
+.advantages-item {
+  display: flex;
+  align-items: flex-start; 
+  gap: 1rem; 
+  width: 100%; 
+  max-width: 800px; 
+}
+
+.advantages-item img {
+  width: 50px; 
+  height: 50px; 
+  object-fit: contain; 
+}
+
+.advantages-content {
+  text-align: left; 
+
+}
+
+.advantages-content h4 {
+  margin: 0 0 0.5rem; 
+}
+
+.advantages-content p {
+  margin: 0; 
+}
+
+
+/* статьи */
+#articles {
+  
+}
+
+
+/* footer */
+.footer-cont {
+background-color: #2b6070;
+display: flex;
+justify-content: center;
+gap: 20px;
+padding: 30px;
+}
+.footer-cont a:hover img {
+  filter: drop-shadow(0 0 15px #5BDCD5);
+  transition: all 0.5s ease;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 1000; 
+  background-color: transparent;
+}
+
+.floating-button img {
+ width: 60px;
+  border-radius: 50%; 
+  transition: transform 0.3s ease; 
+}
+
+.floating-button img:hover {
+  transform: scale(1.1); 
+}
+
+
+.hr-line {
+  align-self: center;
+}
+
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 50%;
+      background: #2b6a66;
+      padding: 2rem 1rem;
+      box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+      gap: 2rem;
+    }
+  
+    .menu.active {
+      display: flex;
+    }
+  
+    .menu a {
+      font-size: 1.2rem;
+    }
+  
+    .burger {
+      display: flex;
+    }
+  }
