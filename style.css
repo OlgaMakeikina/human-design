@@ -151,11 +151,16 @@ margin-top: 0;
   margin-bottom: 10px;
   animation: gradient 5s ease infinite;
   margin-top: 50px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
  
 
   /* тарифы */
+  .item {
+    border-radius: 5px 5px 0 0;
+  }
   .tarif-cont {
     display: flex;
     justify-content: space-evenly;
@@ -171,6 +176,7 @@ margin-top: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   background-color: #ffffff;
   width: 200px;
+  margin-top: 20px;
 }  
 .tarif:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
@@ -215,6 +221,7 @@ margin-top: 0;
   font-size: 18px;
   gap: 50px;
   margin: 70px 10%;
+
 }
 .hd-about img {
   width: 40%;
@@ -331,6 +338,8 @@ padding: 30px;
   align-self: center;
 }
 
+
+
   @media (max-width: 768px) {
     .menu {
       display: none;
@@ -356,5 +365,11 @@ padding: 30px;
   
     .burger {
       display: flex;
+    }
+    .hd-about {
+      flex-direction: column;
+    }
+    .hd-about img {
+      width: 90%;
     }
   }
