@@ -10,7 +10,7 @@ html, body {
   }
 
 body {
-
+    margin: 0;
     background-color: #fffff8;
   }
 
@@ -30,10 +30,12 @@ body {
     font-weight: bold;
     font-family: "Cormorant Garamond", serif;
     font-weight: 400;
+    font-size: 12px;
     font-style: normal;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 10px 0 0 3%;
   }
   .logo img {
     margin: 0;
@@ -82,18 +84,19 @@ body {
     height: 3px;
     background: white;
   }
-
+section {
+  margin-bottom: 100px;
+}
 .header {
   font-family: "Cormorant Garamond", serif;
   font-size: 36px;
   font-weight: 600;
   text-align: center;
   color: #6e6157;
-  margin-top: 150px;
 }
 /* home */
 #home {
-  flex: 0 0 auto; /* Задаем фиксированную высоту для блока */
+  flex: 0 0 auto; /
   height: 100vh;
   width: 100%;
   background-image: url(1.jpg);
@@ -103,19 +106,33 @@ body {
   background-size: cover;
   background-blend-mode: multiply;
 }
+.large-header {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+
+}
+
 .main-name {
   color:#5BDCD5;
   letter-spacing: 2px; 
   font-family: "Raleway", serif;
   font-size: 24px;
 }
-.main-cont {
+.main-cont {  
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 45%;
   justify-content: center;
-  margin-left: 5%;
+  margin-left: 30%;
+  color: rgb(91, 220, 213);
 }
 .text-hd {
   font-family: "Raleway", serif;
@@ -126,15 +143,17 @@ body {
   font-size: 48px;
   font-weight: bold;
   font-family: "Rubik Mono One", serif;
+  color: #ffffff; 
+  text-shadow: 
+    1px 1px 2px rgba(0, 0, 0, 0.8), /* Тень для объема */
+    -1px -1px 2px rgba(255, 255, 255, 0.5); /* Светлая подсветка для объема */
   filter: drop-shadow(0 0 15px #5BDCD5);  
-  background: linear-gradient(45deg, #5BDCD5, #F3B260);
-  animation: gradient 5s ease infinite;
   background-size: cover;
   background-position: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0.7px #2b6a66; 
-margin-top: 0;
+  margin-top: 0;
 }
 
 .messageMe {
@@ -142,9 +161,9 @@ margin-top: 0;
   background: linear-gradient(45deg, #5BDCD5,#4C9A8A, #5BDCD5, #F3B260);
   background-size: 300% 300%; /* Увеличиваем размер градиента */
   border: #6e6157 1px solid;
-  color: #fffff8;
+  font-size: 18px;
   font-weight: bold;
-  padding: 10px;
+  padding: 15px;
   width: 60%;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -155,16 +174,22 @@ margin-top: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
- 
-
+.messageMe:hover {
+  filter: drop-shadow(0 0 15px #5BDCD5);  
+}
+.messageMe a {
+  text-decoration: none;
+  color: #fffff8;
+}
   /* тарифы */
   .item {
     border-radius: 5px 5px 0 0;
   }
   .tarif-cont {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-left: 10%;
+    width: 80%;
   }
 .tarif {
   border: 1px solid #6e6157;
@@ -210,7 +235,99 @@ margin-top: 0;
     background-position: 100% 0;
   }
 }
+/* FAQ */
+#faq {
+  position: relative;
+  background-image: url('5.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header-faq {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  color: #fffff8;
+}
+#faq::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(34, 47, 50, 0.7); 
+  z-index: 1;
+}
 
+#faq > * {
+  position: relative;
+  z-index: 2; 
+}
+.text-faq {
+  color: #fffff8;
+  font-family: "Raleway", serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: 70%;
+  margin-left: 15%;
+  padding: 20px;
+}
+.accordion-cont {
+  margin-bottom: 100px;
+}
+.accordion {
+  background: linear-gradient(45deg, #4C9A8A, #5BDCD5, #4C9A8A);
+  background-size: 200% 200%; 
+  border: 1px solid #6e6157;
+  color: #fffff8;
+  font-family: "Raleway", serif;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 15px;
+  width: 80%;
+  margin-left: 10%;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  color: #fffff8;
+  font-weight: bold;
+}
+
+.active {
+background: #2b6070;
+color: #fffff8;
+font-family: "Raleway", serif;
+}
+
+
+.accordion:hover {
+  background: linear-gradient(45deg, #4C9A8A, #5BDCD5, #4C9A8A);
+  background-size: 200% 200%; 
+  animation: gradient 5s ease infinite;
+  color: #6e6157;
+  font-family: "Raleway", serif;
+}
+
+.panel {
+  padding: 15px 0;
+  display: none;
+  background-color: #fffff8;
+  overflow: hidden;
+ 
+  margin-left: 10%;
+  width: 80%;
+  color: #6e6157;
+  font-family: "Raleway", serif;
+  font-size: 18px;
+}
+.panel p {
+  margin-left: 10px;
+}
 
 /* О дизайне */
 .hd-about {
@@ -219,7 +336,7 @@ margin-top: 0;
   color: #6e6157;
   font-family: "Raleway", serif;
   font-size: 18px;
-  gap: 50px;
+  gap: 30px;
   margin: 70px 10%;
 
 }
@@ -230,6 +347,20 @@ margin-top: 0;
 .header-point {
   font-family: "Cormorant Garamond", serif;
   font-size: 24px;
+  text-align: center;
+}
+.hd-about-pic {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  border-radius: 5px;
+}
+p {
+  margin-bottom: 0; 
+  margin-top: 0; /* Убираем нижний отступ у абзаца */
+}
+
+ul.hd-list {
+  margin-top: 0; /* Убираем верхний отступ у списка */
+  margin-bottom: 0; 
 }
 
 /* Обо мне */
@@ -251,8 +382,9 @@ margin-top: 0;
   font-size: 36px;
   text-align: center;
 }
-.adv-main-cont {
-
+.portrait {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  border-radius: 5px;
 }
 .advantages {
   font-family: "Raleway", serif;
@@ -337,6 +469,125 @@ padding: 30px;
 .hr-line {
   align-self: center;
 }
+
+/* slider */
+swiper-container {
+  width: 240px;
+  height: 320px;
+}
+
+swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+swiper-slide:nth-child(1n) {
+  background-color: rgb(206, 17, 17);
+}
+
+swiper-slide:nth-child(2n) {
+  background-color: rgb(0, 140, 255);
+}
+
+swiper-slide:nth-child(3n) {
+  background-color: rgb(10, 184, 111);
+}
+
+swiper-slide:nth-child(4n) {
+  background-color: rgb(211, 122, 7);
+}
+
+swiper-slide:nth-child(5n) {
+  background-color: rgb(118, 163, 12);
+}
+
+swiper-slide:nth-child(6n) {
+  background-color: rgb(180, 10, 47);
+}
+
+swiper-slide:nth-child(7n) {
+  background-color: rgb(35, 99, 19);
+}
+
+swiper-slide:nth-child(8n) {
+  background-color: rgb(0, 68, 255);
+}
+
+swiper-slide:nth-child(9n) {
+  background-color: rgb(218, 12, 218);
+}
+
+swiper-slide:nth-child(10n) {
+  background-color: rgb(54, 94, 77);
+}
+
+/* новости */
+.news-slider {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.news-slider-wrapper {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.news-slide {
+  flex: 0 0 33.33%; /* Каждая новость занимает треть ширины */
+  box-sizing: border-box;
+  padding: 20px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.news-slide h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.news-slide p {
+  margin: 0;
+}
+.news-slide img {
+  width: 100%; /* Заполняет всю ширину контейнера */
+  height: auto; /* Высота рассчитывается автоматически для сохранения пропорций */
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
 
 
 
