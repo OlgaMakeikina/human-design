@@ -314,6 +314,7 @@ section {
 .accordion {
   background: linear-gradient(45deg, #4C9A8A, #5BDCD5, #4C9A8A);
   background-size: 200% 200%; 
+  animation: gradient 10s ease infinite;
   border: 1px solid #6e6157;
   color: #fffff8;
   font-family: "Raleway", serif;
@@ -338,11 +339,7 @@ font-family: "Raleway", serif;
 
 
 .accordion:hover {
-  background: linear-gradient(45deg, #4C9A8A, #5BDCD5, #4C9A8A);
-  background-size: 200% 200%; 
-  animation: gradient 5s ease infinite;
   color: #6e6157;
-  font-family: "Raleway", serif;
 }
 
 .panel {
