@@ -42,6 +42,9 @@ body {
     margin-left: 10%;
     gap: 50px;
   }
+  .about-tarif img {
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.2); 
+  }
   .about-tarif h2 {
     font-family: "Cormorant Garamond", serif;
     font-size: 36px;
