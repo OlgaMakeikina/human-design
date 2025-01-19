@@ -125,4 +125,8 @@ padding: 30px;
         margin-bottom: 50px;
         text-align: center;
       }
+    .tarif-content {
+        text-align: justify;
+    }
+
 }
