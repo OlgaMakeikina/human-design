@@ -892,6 +892,17 @@ font-family: "Raleway", serif;
   #quote {
     margin-top: 100px;
   }
+  .present {
+    margin: 50px 10%;
+}
+.present-cont p{
+  width: 100%;
+  margin-left: 0%;    
+  color: #6e6157;
+  font-family: "Raleway", serif;
+  font-size: 18px;
+  padding: 15px 0;
+}
 }
 
 
@@ -999,8 +1010,10 @@ font-family: "Raleway", serif;
     .author-quote {
       font-size: 16px;
     }
+    .present h3 {
+      font-size: 20px;
   }
-
+  }
   @media (max-width: 376px) {
 
     .main-name {
