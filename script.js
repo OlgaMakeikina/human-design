@@ -39,6 +39,7 @@ async function fetchNews() {
 }
 
 // Функция для отрисовки новостей
+/*
 function renderNews() {
   sliderWrapper.innerHTML = ''; // Очищаем слайдер перед рендерингом
   newsData.forEach((news) => {
@@ -73,7 +74,7 @@ nextBtn.addEventListener('click', () => {
 
 // Загружаем данные при загрузке страницы
 fetchNews();
-
+*/
 
 
 // accordion

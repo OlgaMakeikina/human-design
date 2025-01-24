@@ -85,6 +85,7 @@ body {
     width: 25px;
     height: 3px;
     background: white;
+    margin-right: 10px;
   }
 section {
   margin-bottom: 100px;
@@ -205,6 +206,75 @@ section {
   color: #fffff8;
 }
   /* тарифы */
+  .present {
+    margin: 50px 20%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 3px groove;
+    animation: pulse 10s infinite;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@keyframes pulse {
+  0% {
+    border-color: rgb(91, 220, 213, 1);
+  }
+  25% {
+    border-color: rgba(243, 178, 96, 1);
+  }
+  50% {
+    border-color: rgba(43, 96, 112, 1);
+  }
+  75% {
+    border-color:  rgba(110, 97, 87, 1);
+  }
+  100% {
+    border-color: rgb(91, 220, 213, 1);
+  }
+}
+
+  .present h3 {
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 26px;
+    color: #d79a4f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  .present-btn {
+    font-family: "Raleway", serif;
+    background: linear-gradient(45deg, #5bdcd5,#4C9A8A, #5BDCD5, #F3B260);
+    background-size: 300% 300%; 
+    border: #6e6157 1px solid;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .present-btn a {
+    text-decoration: none; 
+     color: #fffff8;
+  }
+  .present-btn:hover {
+    animation: gradient 5s ease infinite;
+  }
+  .present-cont p{
+    width: 80%;
+    margin-left: 10%;    
+    color: #6e6157;
+    font-family: "Raleway", serif;
+    font-size: 18px;
+    padding: 15px;
+  }
+
   .item {
     border-radius: 5px 5px 0 0;
   }
@@ -240,10 +310,11 @@ section {
 }
 .more-info {
   font-family: "Raleway", serif;
-  background: linear-gradient(45deg, #5BDCD5,#4C9A8A, #5BDCD5, #F3B260);
+  background: linear-gradient(45deg, #5bdcd5,#4C9A8A, #5BDCD5, #F3B260);
   background-size: 300% 300%; 
   border: #6e6157 1px solid;
   font-weight: bold;
+  font-size: 18px;
   padding: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -395,6 +466,7 @@ ul.hd-list {
   display: flex;
   justify-content: space-between;
   margin: 70px 10%;
+  flex-wrap: wrap;
  
 }
 .about-text {
@@ -429,11 +501,35 @@ ul.hd-list {
 
 .advantages-item {
   display: flex;
-  align-items: flex-start; 
+  align-items: center;
   gap: 1rem; 
-  width: 100%; 
-  max-width: 800px; 
+  width: 60%; 
+  border: 1px solid #2b6070;
+  padding: 15px;
+  border-radius: 30px 0 30px 0;
+  height: 80px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.advantages-item:nth-child(odd) {
+  transform: translateX(-30px); 
+}
+
+.advantages-item:nth-child(even) {
+  transform: translateX(30px); 
+}
+
+.advantages-item:hover {
+  background: linear-gradient(45deg, #4C9A8A, #5BDCD5, #4C9A8A);
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+  transform: scale(1.05); 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.advantages-item:hover p{
+  color: #fffff8;
 }
 
 
@@ -450,6 +546,7 @@ ul.hd-list {
 
 .advantages-content h4 {
   margin: 0 0 0.5rem; 
+  color: #2b6070;
 }
 
 .advantages-content p {
@@ -784,6 +881,11 @@ font-family: "Raleway", serif;
   .messageMe {
     font-size: 30px;
   }
+  .reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 100px;
+  }
   .quote-cont {
     height: 30vh;
   }
@@ -812,6 +914,13 @@ font-family: "Raleway", serif;
 
 .quote-cont {
   height: 40vh;
+}
+.advantages {
+  gap: 1rem; 
+}
+.advantages-item {
+  width: 70%; 
+  padding: 15px;
 }
 
 }
@@ -849,6 +958,9 @@ font-family: "Raleway", serif;
       font-size: 18px;
       font-weight: 400;
     }
+    .advantages-item {
+      height: 90px;
+    }
   }
   @media (max-width: 431px) {
     .main-cont h1 {
@@ -867,6 +979,17 @@ font-family: "Raleway", serif;
     .quote-cont {
       height: 30vh;
     }
+    .advantages-item {
+      height: 120px;
+    }
+    .advantages-item:nth-child(odd) {
+      transform: translateX(0px); 
+    }
+    
+    .advantages-item:nth-child(even) {
+      transform: translateX(0px); 
+    }
+    
   }
 
   @media (max-width: 390px) {
