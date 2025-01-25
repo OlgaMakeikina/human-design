@@ -833,7 +833,6 @@ swiper-slide:nth-child(10n) {
   margin-left: 0%;
   color: rgb(91, 220, 213);
   text-align: center;
-  padding-bottom: 50px;
 }
 
 .active, .accordion:hover {
