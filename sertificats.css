@@ -1,0 +1,209 @@
+body {
+    background-color: #fffff8;
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+h4 {
+    font-family: "Railway", serif;
+    text-align: center;
+    font-size: 24px;
+    color: #6e6157;
+}
+#pictures {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1; 
+    width: 500px;
+    height: 350px;
+  }
+  
+  #pictures.fade-out {
+    opacity: 0; 
+  }
+  
+    #back, #next {
+    font-size: 40px;
+    color: #2b6070;
+    background-color: transparent;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    }
+
+      .certificates-page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: "Raleway", serif;
+        color: #6e6157;
+        flex: 1;
+      }
+      
+      .page-title {
+        font-family: "Cormorant Garamond", serif;
+        text-align: center;
+        font-size: 36px;
+        color: #6e6157;
+        font-weight: 600;
+      }
+      
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+      }
+      
+      .diplomas-section, .certificates-section {
+        flex: 1;
+        min-width: 300px;
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      
+      .diplomas-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .download-doc {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #6e6157;
+        font-weight: bold;
+        transition: transform 0.3s, color 0.3s;
+      }
+      
+      .download-doc:hover {
+        transform: translateY(-5px);
+        color: #4C9A8A;
+      }
+      
+      .download-doc img {
+        margin-right: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .carousel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      
+      .back-button {
+        text-align: center;
+      }
+      
+      .back-button button {
+        transition: background 0.3s;
+        font-family: "Raleway", serif;
+        background: transparent;
+        text-transform: uppercase;
+        border: 2px solid #2b6070;
+        color: #2b6070;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 250px;
+        margin: 50px 0;
+      }
+      
+      .back-button button:hover {
+        background: linear-gradient(45deg, #5BDCD5,#4C9A8A, #5BDCD5);
+      }
+
+
+
+    /* footer */
+.footer-cont {
+    background-color: #2b6070;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    }
+    .footer-cont a:hover img {
+      filter: drop-shadow(0 0 15px #5BDCD5);
+      transition: all 0.5s ease;
+    }
+    
+    .floating-button {
+      position: fixed;
+      bottom: 20px; 
+      right: 20px; 
+      z-index: 1000; 
+      background-color: transparent;
+    }
+    
+    .floating-button img {
+     width: 60px;
+      border-radius: 50%; 
+      transition: transform 0.3s ease; 
+    }
+    
+    .floating-button img:hover {
+      transform: scale(1.1); 
+    }
+    
+    
+    .hr-line {
+      align-self: center;
+    }
+
+
+    
+@media (max-width: 1024px) {
+  #pictures {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 912px) {
+  .content {
+  flex-direction: column;
+  margin: 0 10%;
+  gap: 50px;
+}
+#pictures {
+  width: 80%;
+  height: 80%;
+}
+.back-button {
+  margin-top: 50px;
+}
+.page-title {
+  margin-bottom: 70px;
+}
+}
+
+@media (max-width: 431px) {
+  .content {
+    margin: 0 5%;
+  }
+}
+
+@media (max-width: 391px) {
+  #back, #next {
+  font-size: 30px;
+  padding: 5px;
+  }
+h4 {
+  font-size: 20px;
+}
+.content {
+  margin: 0 0%;
+}
+}

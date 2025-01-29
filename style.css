@@ -295,7 +295,7 @@ section {
   justify-content: space-between; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   background-color: #ffffff;
-  width: 200px;
+  width: 250px;
   margin-top: 20px;
 }  
 .tarif:hover {
@@ -427,6 +427,7 @@ font-family: "Raleway", serif;
   margin-left: 10px;
 }
 
+
 /* О дизайне */
 .hd-about {
   display: flex; 
@@ -436,6 +437,7 @@ font-family: "Raleway", serif;
   font-size: 18px;
   gap: 30px;
   margin: 70px 10%;
+  text-align: justify;
 }
 .hd-about img {
   width: 40%;
@@ -449,6 +451,9 @@ font-family: "Raleway", serif;
 .hd-about-pic {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   border-radius: 5px;
+}
+.hd-about-text {
+  text-indent: 20px;
 }
 p {
   margin-bottom: 0; 
@@ -465,13 +470,23 @@ ul.hd-list {
   display: flex;
   justify-content: space-between;
   margin: 70px 10%;
-  flex-wrap: wrap;
- 
+  gap: 50px;
+  text-align: justify;
 }
 .about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-family: "Raleway", serif;
   color: #6e6157;
   font-size: 18px;
+}
+.about-text-story {
+  text-indent: 20px;
+}
+.link-diploms {
+  margin-top: 20px;
+  text-indent: 20px;
 }
 .advantages-header {
   font-family: "Cormorant Garamond", serif;
@@ -483,6 +498,9 @@ ul.hd-list {
 .portrait {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   border-radius: 5px;
+}
+.portrait-m0bile {
+  display: none;
 }
 .advantages {
   font-family: "Raleway", serif;
@@ -526,6 +544,7 @@ ul.hd-list {
   animation: gradient 10s ease infinite;
   transform: scale(1.05); 
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 30px 0 30px 0;
 }
 .advantages-item:hover p{
   color: #fffff8;
@@ -831,7 +850,10 @@ font-family: "Raleway", serif;
   
   
     .mobile-contacts {
-    display: block;
+    display: flex;
+   }
+   .mobile-contacts img{
+    width: 80px;
    }
     .menu {
       display: none;
@@ -844,7 +866,7 @@ font-family: "Raleway", serif;
       background: #2b6070;
       padding: 2rem 1rem;
       box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-      gap: 2rem;
+      gap: 4rem;
     }
   
     .menu.active {
@@ -852,7 +874,7 @@ font-family: "Raleway", serif;
     }
   
     .menu a {
-      font-size: 1.2rem;
+      font-size: 36px;
     }
   
     .burger {
@@ -862,7 +884,7 @@ font-family: "Raleway", serif;
       flex-direction: column;
     }
     .hd-about img {
-      width: 90%;
+      width: 100%;
     }
     .main-cont {  
       height: 50%;
@@ -902,6 +924,23 @@ font-family: "Raleway", serif;
   font-size: 18px;
   padding: 15px 0;
 }
+.portrait {
+  display: none;
+}
+.portrait-m0bile {
+  display: block;
+  width: 100%;
+}
+.about-cont {
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0px 10%;
+  gap: 10px;
+  text-align: justify;
+}
+.about-text {
+  margin-top: 40px;
+}
 }
 
 
@@ -936,6 +975,15 @@ font-family: "Raleway", serif;
 }
 
   @media (max-width: 540px) {
+    .mobile-contacts img{
+      width: 60px;
+     }
+      .menu {
+        gap: 2rem;
+      }
+      .menu a {
+        font-size: 24px;
+      }
     .main-cont h1 {
       font-size: 60px;
     }
@@ -1014,6 +1062,15 @@ font-family: "Raleway", serif;
   }
 
   @media (max-width: 390px) {
+    .mobile-contacts img{
+      width: 50px;
+     }
+      .menu {
+        gap: 1.5rem;
+      }
+      .menu a {
+        font-size: 20px;
+      }
     .text-quote {
       font-size: 24px;
     }
