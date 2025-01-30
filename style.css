@@ -13,7 +13,7 @@ html, body {
   }
   
 body {
-    background-color: #fffff8;
+    background-color: #fffffc;
   }
 
   .navbar {
@@ -123,6 +123,11 @@ section {
   background-size: cover;
   box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.2); 
 }
+@supports (-webkit-touch-callout: none) {
+  #home {
+    background-attachment: scroll !important;
+  }
+}
 #particles-js {
   height: 100vh;
 }
@@ -159,7 +164,6 @@ section {
   color: #e0f7f4;
   font-size: 20px; 
   line-height: 1.6; 
-  font-style: italic;
   font-weight: bold;
 }
 
@@ -187,7 +191,6 @@ section {
   background-size: 300% 300%; /* Увеличиваем размер градиента */
   border: #6e6157 1px solid;
   font-size: 20px;
-  font-weight: bold;
   padding: 15px;
   width: 60%;
   cursor: pointer;
@@ -210,7 +213,7 @@ section {
   /* тарифы */
   .present {
     margin: 50px 20%;
-    padding: 5px;
+    padding: 15px;
     border-radius: 5px;
     border: 3px groove;
     animation: pulse 10s infinite;
@@ -255,9 +258,8 @@ section {
     background: linear-gradient(45deg, #5bdcd5,#4C9A8A, #5BDCD5, #F3B260);
     background-size: 300% 300%; 
     border: #6e6157 1px solid;
-    font-weight: bold;
     font-size: 18px;
-    padding: 5px;
+    padding: 5px 35px;
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 5px;
@@ -316,7 +318,6 @@ section {
   background: linear-gradient(45deg, #5bdcd5,#4C9A8A, #5BDCD5, #F3B260);
   background-size: 300% 300%; 
   border: #6e6157 1px solid;
-  font-weight: bold;
   font-size: 18px;
   padding: 5px;
   cursor: pointer;
@@ -331,7 +332,9 @@ section {
   .more-info:hover {
     animation: gradient 5s ease infinite;
   }
-
+.prices {
+  margin-bottom: 100px;
+}
 
 @keyframes gradient {
   50% {

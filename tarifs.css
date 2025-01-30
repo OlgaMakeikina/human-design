@@ -1,20 +1,21 @@
 
 body {
     margin: 0;
-    background-color: #fffff8;
+    background-color: #fffffc;
     font-family: "Raleway", serif;
     color: #6e6157;
     font-size: 18px;
     margin-top: 50px;
 }
-
+h3 {
+  font-weight: 500;
+}
 .btn {
     font-family: "Raleway", serif;
     background: linear-gradient(45deg, #5BDCD5,#4C9A8A, #5BDCD5, #F3B260);
     background-size: 200% 200%; 
     border: #6e6157 1px solid;
     color: #fffff8;
-    font-weight: bold;
     font-size: 20px;
     padding: 10px;
     cursor: pointer;
