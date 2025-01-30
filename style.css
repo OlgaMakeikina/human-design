@@ -26,6 +26,7 @@ body {
     align-items: center;
     background-color: #2b6070;
     color: #fffff8;
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.2); 
   }
   
   .logo {
@@ -37,7 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px 0 0 3%;
+    margin: 5px 0 5px 3%;
   }
   .logo img {
     margin: 0;
@@ -120,6 +121,7 @@ section {
   background-position: start;
   background-attachment: fixed;
   background-size: cover;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.2); 
 }
 #particles-js {
   height: 100vh;
@@ -195,7 +197,7 @@ section {
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   pointer-events: auto;
-
+  border-radius: 5px;
 }
 
 .messageMe:hover {
@@ -258,6 +260,7 @@ section {
     padding: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    border-radius: 5px;
   }
   .present-btn a {
     text-decoration: none; 
@@ -319,6 +322,7 @@ section {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-bottom: 10px;
+  border-radius: 5px;
 }
 .more-info a {
   text-decoration: none; 
@@ -346,6 +350,7 @@ section {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.2); 
 }
 .header-faq {
   font-family: "Cormorant Garamond", serif;
@@ -399,12 +404,14 @@ section {
   transition: background-color 0.3s ease;
   color: #fffff8;
   font-weight: bold;
+ border-radius: 5px;
 }
 
 .active {
 background: #2b6070;
 color: #fffff8;
 font-family: "Raleway", serif;
+border-radius: 5px 5px 0 0;
 }
 
 
@@ -422,6 +429,8 @@ font-family: "Raleway", serif;
   color: #6e6157;
   font-family: "Raleway", serif;
   font-size: 18px;
+  border-radius: 0 0 5px 5px;
+  border: 1px solid #6e6157;
 }
 .panel p {
   margin-left: 10px;
@@ -501,6 +510,8 @@ ul.hd-list {
 }
 .portrait-m0bile {
   display: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  border-radius: 5px;
 }
 .advantages {
   font-family: "Raleway", serif;
@@ -579,6 +590,7 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 background-attachment: fixed;
+box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.2); 
 }
 #quote::before {
   content: "";
@@ -811,9 +823,10 @@ swiper-slide:nth-child(10n) {
   #home {
   background-image: url(1-1.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+  min-height: 100vh;
 }
 
 
@@ -859,7 +872,7 @@ font-family: "Raleway", serif;
       display: none;
       flex-direction: column;
       position: fixed;
-      top: 0;
+      top: -20px;
       right: 0;
       height: 100%;
       width: 50%;
@@ -907,12 +920,6 @@ font-family: "Raleway", serif;
     flex-direction: column-reverse;
     margin-top: 100px;
   }
-  .quote-cont {
-    height: 30vh;
-  }
-  #quote {
-    margin-top: 100px;
-  }
   .present {
     margin: 50px 10%;
 }
@@ -941,14 +948,31 @@ font-family: "Raleway", serif;
 .about-text {
   margin-top: 40px;
 }
+#quote {
+  margin-top: 0px; 
+  height: 100vh;
 }
-
-
-@media (max-width: 854px) {
-  .main-cont {
-    height: 60%;
+.quote-cont {
+height: 100vh;
+margin: 0 5%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 0;
   }
+  .text-quote {
+    font-size: 56px;
+    margin-left: 0;
+    width: 90%;
+  }
+  .author-quote {
+    font-size: 40px;  
+    margin: 5% 5%;  
+  }
+
 }
+
 
   @media (max-width: 820px) {
   .main-cont h1 {
@@ -957,13 +981,12 @@ font-family: "Raleway", serif;
   .main-cont {
     padding-bottom: 100px;
   }
+
 }
 
 @media (max-width: 768px) {
 
-.quote-cont {
-  height: 40vh;
-}
+
 .advantages {
   gap: 1rem; 
 }
@@ -1003,6 +1026,12 @@ font-family: "Raleway", serif;
       flex-direction: column;
       align-items: center;
     }
+    .tarif {
+      width: 300px;
+    }
+    .item {
+      width: 300px;
+    }
     .text-quote {
       font-size: 24px;
       width: 90%;
@@ -1015,18 +1044,7 @@ font-family: "Raleway", serif;
     .advantages-item {
       height: 90px;
     }
-    #quote {
-      margin-top: 0px; 
-      height: 100vh;
-    }
-    .quote-cont {
-      height: 100vh;
-        margin: 0 5%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-      }
+   
     .text-quote {
       font-size: 36px;
     }
@@ -1089,4 +1107,13 @@ font-family: "Raleway", serif;
     .advantages-item {
       height: 170px;
     }
+  }
+
+  @media (max-width: 361px) {
+
+  .tarif-cont {
+    align-items: center;
+    margin-left: 0%;
+    width: 100%;
+  }
   }

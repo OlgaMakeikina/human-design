@@ -21,6 +21,7 @@ body {
     transition: all 0.3s ease;    
     animation: gradient 5s ease infinite;
     width: 250px;
+    border-radius: 5px;
   }
   .btn a {
     color: #fffff8;
@@ -43,7 +44,8 @@ body {
     gap: 50px;
   }
   .about-tarif img {
-    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.2); 
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; 
   }
   .about-tarif h2 {
     font-family: "Cormorant Garamond", serif;
@@ -65,6 +67,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     width: 250px;
+    border-radius: 5px;
   }
   .back-to-tarifs:hover {
     background: linear-gradient(45deg, #5BDCD5,#4C9A8A, #5BDCD5);
