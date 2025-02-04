@@ -230,12 +230,6 @@ requestAnimationFrame(update);
 
 
 
-document.addEventListener('touchmove', function(event) {
-  if (window.scrollY <= 0) {
-    event.preventDefault();
-  }
-}, { passive: false });
-
 
 
 
