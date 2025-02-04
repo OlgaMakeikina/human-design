@@ -6,6 +6,8 @@ html, body {
     height: 700px;
     margin: 0;
     padding: 0;
+    overscroll-behavior: none;
+    touch-action: none;
   }
 
   html {
