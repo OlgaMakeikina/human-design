@@ -125,7 +125,7 @@ section {
   box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.2); 
 }
 @supports (-webkit-touch-callout: none) {
-  #home {
+  #home, #faq, #quote {
     background-attachment: scroll !important;
   }
 }
