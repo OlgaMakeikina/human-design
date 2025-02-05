@@ -95,10 +95,10 @@ for (var i = 0; i < acc.length; i++) {
 /* quote */
 /* ---- particles.js config ---- */
 
-particlesJS("particles-js", {
+let particlesConfig = {
   "particles": {
     "number": {
-      "value": 250,
+      "value": window.innerWidth < 768 ? 100 : 250, // 100 частиц для мобилок, 250 для десктопа
       "density": {
         "enable": true,
         "value_area": 800
@@ -124,44 +124,22 @@ particlesJS("particles-js", {
     },
     "opacity": {
       "value": 0.7,
-      "random": false,
-      "anim": {
-        "enable": false,
-        "speed": 0.5,
-        "opacity_min": 0.1,
-        "sync": false
-      }
+      "random": false
     },
     "size": {
-      "value": 4,
-      "random": true,
-      "anim": {
-        "enable": false,
-        "speed": 20,
-        "size_min": 0.1,
-        "sync": false
-      }
+      "value": window.innerWidth < 768 ? 2 : 4, // Уменьшаем размер частиц на мобильных
+      "random": true
     },
     "line_linked": {
       "enable": true,
-      "distance": 200,
+      "distance": window.innerWidth < 768 ? 100 : 200, // Уменьшаем дистанцию линий на мобилках
       "color": "#b5dcd5",
       "opacity": 0.4,
       "width": 1
     },
     "move": {
       "enable": true,
-      "speed": 6,
-      "direction": "none",
-      "random": false,
-      "straight": false,
-      "out_mode": "out",
-      "bounce": false,
-      "attract": {
-        "enable": false,
-        "rotateX": 600,
-        "rotateY": 1200
-      }
+      "speed": 6
     }
   },
   "interactivity": {
@@ -179,7 +157,7 @@ particlesJS("particles-js", {
     },
     "modes": {
       "grab": {
-        "distance": 250,
+        "distance": window.innerWidth < 768 ? 150 : 250, // На мобилках уменьшить радиус "захвата"
         "line_linked": {
           "opacity": 1
         }
@@ -196,15 +174,18 @@ particlesJS("particles-js", {
         "duration": 0.4
       },
       "push": {
-        "particles_nb": 4
+        "particles_nb": 2 // Меньше частиц при клике
       },
       "remove": {
-        "particles_nb": 2
+        "particles_nb": 1
       }
     }
   },
   "retina_detect": true
-});
+};
+
+// Запуск particles.js
+particlesJS("particles-js", particlesConfig);
 
 
 /* ---- stats.js config ---- */
