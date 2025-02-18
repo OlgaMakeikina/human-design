@@ -98,7 +98,7 @@ for (var i = 0; i < acc.length; i++) {
 let particlesConfig = {
   "particles": {
     "number": {
-      "value": window.innerWidth < 768 ? 100 : 250, // 100 частиц для мобилок, 250 для десктопа
+      "value": window.innerWidth < 768 ? 150 : 250, // 100 частиц для мобилок, 250 для десктопа
       "density": {
         "enable": true,
         "value_area": 800
@@ -127,12 +127,12 @@ let particlesConfig = {
       "random": false
     },
     "size": {
-      "value": window.innerWidth < 768 ? 2 : 4, // Уменьшаем размер частиц на мобильных
+      "value": window.innerWidth < 768 ? 3 : 4, // Уменьшаем размер частиц на мобильных
       "random": true
     },
     "line_linked": {
       "enable": true,
-      "distance": window.innerWidth < 768 ? 100 : 200, // Уменьшаем дистанцию линий на мобилках
+      "distance": window.innerWidth < 768 ? 150 : 200, // Уменьшаем дистанцию линий на мобилках
       "color": "#b5dcd5",
       "opacity": 0.4,
       "width": 1
