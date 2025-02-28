@@ -4,18 +4,16 @@ const burger = document.querySelector('.burger');
 const menu = document.querySelector('.menu');
 const links = document.querySelectorAll('.menu-link');
 
-// Открытие/закрытие меню
 burger.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
 
-// Закрытие меню при клике на ссылку
+
 links.forEach(link => {
   link.addEventListener('click', () => {
     menu.classList.remove('active');
   });
 });
-
 
 
 const sliderWrapper = document.querySelector('.news-slider-wrapper');
@@ -26,10 +24,10 @@ let currentIndex = 0;
 const slidesPerPage = 3;
 let newsData = [];
 
-// Функция для загрузки новостей
+
 async function fetchNews() {
   try {
-    const response = await fetch('newsData.json'); // Загружаем JSON файл
+    const response = await fetch('newsData.json'); 
     newsData = await response.json();
     renderNews();
     updateSlider();
@@ -127,12 +125,12 @@ let particlesConfig = {
       "random": false
     },
     "size": {
-      "value": window.innerWidth < 768 ? 3 : 4, // Уменьшаем размер частиц на мобильных
+      "value": window.innerWidth < 768 ? 3 : 4, 
       "random": true
     },
     "line_linked": {
       "enable": true,
-      "distance": window.innerWidth < 768 ? 150 : 200, // Уменьшаем дистанцию линий на мобилках
+      "distance": window.innerWidth < 768 ? 150 : 200, 
       "color": "#b5dcd5",
       "opacity": 0.4,
       "width": 1
@@ -157,7 +155,7 @@ let particlesConfig = {
     },
     "modes": {
       "grab": {
-        "distance": window.innerWidth < 768 ? 150 : 250, // На мобилках уменьшить радиус "захвата"
+        "distance": window.innerWidth < 768 ? 150 : 250, 
         "line_linked": {
           "opacity": 1
         }
@@ -174,7 +172,7 @@ let particlesConfig = {
         "duration": 0.4
       },
       "push": {
-        "particles_nb": 2 // Меньше частиц при клике
+        "particles_nb": 2 
       },
       "remove": {
         "particles_nb": 1
